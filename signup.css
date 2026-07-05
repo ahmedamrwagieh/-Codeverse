@@ -1,0 +1,243 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#f8fbff,#eef4ff,#f6f1ff);
+    overflow-x:hidden;
+    transition:.5s;
+}
+
+
+.background-animation{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.blob{
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    filter:blur(60px);
+    opacity:.6;
+    animation:float 10s infinite ease-in-out;
+}
+
+.b1{background:#3b82f6;top:-80px;left:-80px;}
+.b2{background:#8b5cf6;top:100px;right:-100px;animation-delay:2s;}
+.b3{background:#60a5fa;bottom:-80px;left:20%;animation-delay:4s;}
+.b4{background:#6366f1;bottom:0;right:10%;animation-delay:6s;}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-30px);}
+}
+
+
+.navbar{
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.6);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.logo-code{color:#2563eb;font-weight:800;font-size:28px;}
+.logo-verse{color:#7c3aed;font-weight:800;font-size:28px;}
+
+.theme-btn{
+    border:none;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,.3);
+    backdrop-filter:blur(10px);
+    cursor:pointer;
+    transition:.4s;
+}
+
+.theme-btn:hover{
+    transform:rotate(180deg);
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+}
+
+
+.signup-section{
+    display:flex;
+    align-items:center;
+    min-height:100vh;
+    padding-top:120px;
+}
+
+
+.signup-card{
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(20px);
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+    border:1px solid rgba(255,255,255,.4);
+}
+
+
+.signup-card h2{
+    font-weight:800;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.signup-card p{
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+
+.keyword-highlight{
+    text-align:center;
+    font-size:34px;
+    font-weight:900;
+    margin:15px 0;
+
+    color:#2563eb;
+
+    opacity:0;
+    transform:translateY(25px) scale(0.6);
+    transition:all .8s ease;
+}
+
+
+body.loaded .keyword-highlight{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    animation:glow 2s ease-in-out infinite 1s;
+}
+
+@keyframes glow{
+    0%,100%{
+        text-shadow:0 0 10px rgba(37,99,235,.3),
+                    0 0 25px rgba(37,99,235,.2);
+    }
+    50%{
+        text-shadow:0 0 25px rgba(37,99,235,.8),
+                    0 0 50px rgba(37,99,235,.4);
+    }
+}
+
+
+fieldset{
+    border:1px solid rgba(37,99,235,.2);
+    padding:15px;
+    border-radius:15px;
+}
+
+legend{
+    font-size:14px;
+    font-weight:600;
+    color:#2563eb;
+    padding:0 10px;
+}
+
+
+label{
+    font-weight:600;
+    margin-bottom:6px;
+    color:#334155;
+}
+
+.form-control{
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    background:rgba(255,255,255,.7);
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.form-control:focus{
+    outline:none;
+    box-shadow:0 0 0 3px rgba(37,99,235,.25);
+    transform:translateY(-2px);
+}
+
+
+.password-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.password-box button{
+    position:absolute;
+    right:10px;
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:#64748b;
+}
+
+
+   
+.signup-btn{
+    border-radius:50px;
+    padding:14px;
+    font-weight:600;
+    background:#2563eb;
+    border:none;
+    transition:.4s;
+}
+
+.signup-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(37,99,235,.3);
+}
+
+
+body.dark-mode{
+    background:#0f172a;
+    color:white;
+}
+
+body.dark-mode .signup-card{
+    background:rgba(30,41,59,.75);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+body.dark-mode .form-control{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark-mode label,
+body.dark-mode p{
+    color:#cbd5e1;
+}
+
+body.dark-mode .navbar{
+    background:rgba(15,23,42,.8);
+}
+
+
+
+footer{
+    text-align:center;
+   
+}
+
+footer .text-lg-end{
+    margin-top:30px;
+}
+footer{
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:white;
+    padding:70px 0 30px;
+}
+
